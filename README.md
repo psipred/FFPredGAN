@@ -19,7 +19,7 @@ Wan, C. and Jones, D.T. (2019) Improving protein function prediction with synthe
 
 - Step 2. Generating positive synthetic feature samples by using `./src/Generating_Synthetic_Positive_Samples_FFPred-GAN.py`.
  
-- Step 3. Running Classifier Two-Sample Tests to select the optimal synthetic feature samples by using `./src/Classifier_Two_Sample_Tests.py`. (* The selected optimal synthetic feature samples can be downloaded via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/SyntheticTrainingData/`)
+- Step 3. Running Classifier Two-Sample Tests to select the optimal synthetic feature samples by using `./src/Classifier_Two_Sample_Tests.py`. (* The selected optimal synthetic feature samples can be directly downloaded via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/SyntheticTrainingData/`)
 
 - Step 4. Downloading testing feature samples and class labels via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/TestingData/`.
 
