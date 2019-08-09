@@ -1,6 +1,6 @@
 __author__ = 'cenwan'
 
-#-----The Python implementation of Classifier Two-Sample Tests (CTST) for selecting the optimal synthetic protein feature samples during different training stages of FFPred-GAN.
+#-The Python implementation of Classifier Two-Sample Tests (CTST) for selecting the optimal synthetic protein feature samples.
 
 import numpy as np
 from sklearn.model_selection import LeaveOneOut
