@@ -1,7 +1,7 @@
 
-#-----This is a PyTorch implementation of FFPred-GAN method. 
+#-----This is a PyTorch implementation of FFPred-GAN synthetic protein feature samples generation method. 
 #-----This code was adapted from an implementation of WGAN-GP by caogang/wgan-gp@GitHub repository.
-#-----The training data can be downloaded via http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN.
+#-----The real training data can be downloaded via http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN.
 
 import os, sys
 sys.path.append(os.getcwd())
