@@ -19,15 +19,15 @@ torch.manual_seed(1)
 GOTermID='GO0034613'
 
 with open(".../"+GOTermID+"_Real_Training_Positive.txt") as f:
-    MatrixFeaturesPositiveDebug = [list(x.split(",")) for x in f]
-FeaturesPositiveDebug = [line[1:259] for line in MatrixFeaturesPositiveDebug[:]]
+    MatrixFeaturesPositiveSamples = [list(x.split(",")) for x in f]
+FeaturesPositiveSamples = [line[1:259] for line in MatrixFeaturesPositiveSamples[:]]
 
 GDIM = 512
 DDIM = 86 
 FIXED_GENERATOR = False  
 LAMBDA = .1  
 CRITIC_ITERS = 5  
-BATCH_SIZE = len(FeaturesPositiveDebug)
+BATCH_SIZE = len(FeaturesPositiveSamples)
 ITERS = 100000  
 use_cuda = False
 
