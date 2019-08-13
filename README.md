@@ -25,3 +25,5 @@ Wan, C. and Jones, D.T. (2019) Improving protein function prediction with synthe
 
 - Step 5. Training and testing support vector machine classifier with positive synthetic feature samples augmented training data by using `./src/Testing_Synthetic_Positive_Samples_Augmented_SVM.py`.
 
+- * The protein sequence-based biophysical features can be derived by using the code of FFPred @ https://github.com/psipred/FFPred
+
