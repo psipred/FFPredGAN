@@ -15,6 +15,7 @@ proteinList = [line[0:1] for line in MatrixFeatures[:]]
 realFeatures = [line[1:259] for line in MatrixFeatures[:]]
 realDataset = np.array(realFeatures, dtype='float32')
 
+# Adding equal numbers of binary labels
 label=[]
 for rowIndex in range(len(realDataset)):
     label.append(1)
