@@ -9,13 +9,19 @@ from sklearn.metrics import accuracy_score
 
 GOTermID='GO0034613'
 
-label=[]
+
 
 with open(".../"+GOTermID+"_Real_Training_Positive.txt") as f:
     MatrixFeatures = [list(x.split(",")) for x in f]
 proteinList = [line[0:1] for line in MatrixFeatures[:]]
 realFeatures = [line[1:259] for line in MatrixFeatures[:]]
 realDataset = np.array(realFeatures, dtype='float32')
+
+label=[]
+for rowIndex in range(len(realDataset)):
+    label.append(1)
+for rowIndex in range(len(realDataset)):
+    label.append(0)
 
 opt_diff_accuracy_05=0.5
 opt_Epoch=0
@@ -26,11 +32,6 @@ for indexEpoch in range(0, 500):
          MatrixFeatures = [list(x.split(",")) for x in f]
     fakeFeatures = [line[0:258] for line in MatrixFeatures[:]]
     fakedataset = np.array(fakeFeatures, dtype='float32')
-
-    for rowIndex in range(len(realDataset)):
-        label.append(1)
-    for rowIndex in range(len(fakedataset)):
-        label.append(0)
 
     labelArray=np.asarray(label)
     realFakeFeatures=np.vstack((realDataset, fakedataset))
