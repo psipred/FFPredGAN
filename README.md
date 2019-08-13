@@ -15,15 +15,15 @@ Wan, C. and Jones, D.T. (2019) Improving protein function prediction with synthe
 ---------------------------------------------------------------
 # Running 
 
-- Step 1. Downloading real training feature samples via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/RealTrainingData/`.
+* Step 1. Downloading real training feature samples via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/RealTrainingData/`.
 
-- Step 2. Generating positive synthetic feature samples by using `./src/Generating_Synthetic_Positive_Samples_FFPred-GAN.py`.
+* Step 2. Generating positive synthetic feature samples by using `./src/Generating_Synthetic_Positive_Samples_FFPred-GAN.py`.
  
-- Step 3. Running Classifier Two-Sample Tests to select the optimal synthetic feature samples by using `./src/Classifier_Two_Sample_Tests.py`. (* The selected optimal synthetic feature samples can be directly downloaded via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/SyntheticTrainingData/`)
+* Step 3. Running Classifier Two-Sample Tests to select the optimal synthetic feature samples by using `./src/Classifier_Two_Sample_Tests.py`. (* The selected optimal synthetic feature samples can be directly downloaded via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/SyntheticTrainingData/`)
 
-- Step 4. Downloading testing feature samples and class labels via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/TestingData/`.
+* Step 4. Downloading testing feature samples and class labels via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/TestingData/`.
 
-- Step 5. Training and testing support vector machine classifier with positive synthetic feature samples augmented training data by using `./src/Testing_Synthetic_Positive_Samples_Augmented_SVM.py`.
+* Step 5. Training and testing support vector machine classifier with positive synthetic feature samples augmented training data by using `./src/Testing_Synthetic_Positive_Samples_Augmented_SVM.py`.
 
-- * The protein sequence-based biophysical features can be derived by using the code of FFPred @ https://github.com/psipred/FFPred
+* The protein biophysical features can be derived from raw protein sequences by using the code of FFPred  https://github.com/psipred/FFPred
 
