@@ -194,7 +194,7 @@ for iteration in range(ITERS):
         optimizerD.step()
 
     if iteration%200 == 0:
-       fake_writer = open(".../"+GOTermID+"_Iteration_"+str(iteration)"_Synthetic_Training_Positive.txt","w")
+       fake_writer = open(".../"+GOTermID+"_Iteration_"+str(iteration)+"_Synthetic_Training_Positive.txt","w")
       
        for rowIndex in range(len(fake_output)):
            for columnIndex in range(len(fake_output[0])):
