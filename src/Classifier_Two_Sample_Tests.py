@@ -28,7 +28,7 @@ opt_Epoch=0
 opt_accuracy=0
 for indexEpoch in range(0, 500):
     epoch = indexEpoch * 200
-    with open(".../"+GOTermID+"_Iteration_"+str(iteration)"_Synthetic_Training_Positive.txt") as f:
+    with open(".../"+GOTermID+"_Iteration_"+str(epoch)"_Synthetic_Training_Positive.txt") as f:
          MatrixFeatures = [list(x.split(",")) for x in f]
     fakeFeatures = [line[0:258] for line in MatrixFeatures[:]]
     fakedataset = np.array(fakeFeatures, dtype='float32')
