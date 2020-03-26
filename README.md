@@ -11,6 +11,7 @@ Wan, C. and Jones, D.T. (2019) Improving protein function prediction with synthe
 - Numpy 
 - PyTorch
 - Scikit-learn
+- Cluster
 
 ---------------------------------------------------------------
 # Running 
