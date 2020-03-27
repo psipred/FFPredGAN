@@ -19,6 +19,7 @@ Wan, C. and Jones, D.T. (2019) Improving protein function prediction with synthe
 * Step 1. Downloading real training feature samples via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/RealTrainingData/`.
 
 * Step 2. Generating positive synthetic feature samples by using `./src/Generating_Synthetic_Positive_Samples_FFPred-GAN.py`.
+ (This script is used to train a GAN for generating synthetic protein feature samples for single GO term. In order to generate synthetic samples for mutliple GO terms, this script should be duplicated with only changing the GO term ID.)
  
 * Step 3. Running Classifier Two-Sample Tests to select the optimal synthetic feature samples by using `./src/Classifier_Two_Sample_Tests.py`.<br/> _* The selected optimal synthetic feature samples can be directly downloaded via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/SyntheticTrainingData/`_
 
