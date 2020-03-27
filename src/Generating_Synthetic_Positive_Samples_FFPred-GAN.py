@@ -17,7 +17,8 @@ import torch.optim as optim
 from sklearn import decomposition
 torch.manual_seed(1)
 
-GOTermID='GO0034613'
+GOTermID='GO0034613' 
+#-----Change this GOTermsID if this script is used for generating synthetic proteins for other GO terms.
 
 with open(".../"+GOTermID+"_Real_Training_Positive.txt") as f:
     MatrixFeaturesPositiveSamples = [list(x.split(",")) for x in f]
