@@ -9,19 +9,21 @@ Wan, C. and Jones, D.T. (2019) Improving protein function prediction with synthe
 
 - Python 3.6 
 - Numpy 
-- PyTorch
+- PyTorch (CPU mode)
 - Scikit-learn
 - Standard computer cluster
 
 ---------------------------------------------------------------
 # Running 
+It is recommended to use a standard computer cluster that allows to execute multiple jobs simultaneously (e.g. the SGE array job).
 
-* Step 1. Downloading real training feature samples via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/RealTrainingData/`.
+* Step 1. Downloading real training feature samples via <br/><br/>`http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/RealTrainingData/`.
 
-* Step 2. Generating positive synthetic feature samples by using `./src/Generating_Synthetic_Positive_Samples_FFPred-GAN.py`.
- (This script is used to train a GAN for generating synthetic protein feature samples for single GO term. In order to generate synthetic samples for mutliple GO terms, this script should be duplicated with only changing the GO term ID.)
+* Step 2. Generating positive synthetic feature samples by using the template <br/><br/>`./src/Generating_Synthetic_Positive_Samples_FFPred-GAN.py`.<br/><br/>
+_This template is used to train one GAN for generating synthetic protein feature samples for single GO term. In order to generate synthetic samples for mutliple GO terms, this script should be duplicated with only changing the GO term ID, or changing the absolute pathname of the training feature samples for corresponding GO terms._
  
-* Step 3. Running Classifier Two-Sample Tests to select the optimal synthetic feature samples by using `./src/Classifier_Two_Sample_Tests.py`.<br/> _* The selected optimal synthetic feature samples can be directly downloaded via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/SyntheticTrainingData/`_
+* Step 3. Running Classifier Two-Sample Tests to select the optimal synthetic feature samples by using <br/><br/>`./src/Classifier_Two_Sample_Tests.py`.<br/><br/> 
+_This template is used to select the optimal synthetic protein feature samples generated for single GO term. In order to select the optimal synthetic samples for mutliple GO terms, this script should be duplicated with only changing the GO term ID, or changing the absolute pathname of the real and synthetic feature samples for corresponding GO terms. The selected optimal synthetic feature samples can be directly downloaded via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/SyntheticTrainingData/`_
 
 * Step 4. Downloading testing feature samples and class labels via `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/TestingData/`.
 
