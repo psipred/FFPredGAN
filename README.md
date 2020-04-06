@@ -24,9 +24,9 @@ _This template is used to train one GAN for generating synthetic protein feature
 `http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/GOTerm_List.txt`.<br/><br/>
  
 * Step 3. Running Classifier Two-Sample Tests to select the optimal synthetic feature samples by using <br/><br/>`./src/Classifier_Two_Sample_Tests.py`.<br/><br/> 
-_This template is used to select the optimal synthetic protein feature samples generated for single GO term. In order to select the optimal synthetic samples for mutliple GO terms, this script should be duplicated with only changing the GO term ID, or changing the absolute pathname of the real and synthetic feature samples for corresponding GO terms. The selected optimal synthetic feature samples can be directly downloaded via <br/><br/>`http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/SyntheticTrainingData/`_
+_This template is used to select the optimal synthetic protein feature samples generated for single GO term. In order to select the optimal synthetic samples for mutliple GO terms, this script should be duplicated with only changing the GO term ID, or changing the absolute pathname of the real and synthetic feature samples for corresponding GO terms. The selected optimal synthetic feature samples can be directly downloaded via <br/><br/>`http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/SyntheticTrainingData/`_<br/><br/>
 
-* Step 4. Downloading testing feature samples and class labels via <br/><br/>`http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/TestingData/`.
+* Step 4. Downloading testing feature samples and class labels via <br/><br/>`http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/TestingData/`.<br/><br/>
 
 * Step 5. Training and testing support vector machine classifier with positive synthetic feature samples augmented training data by using<br/><br/> `./src/Testing_Synthetic_Positive_Samples_Augmented_SVM.py`.
 
