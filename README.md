@@ -15,7 +15,7 @@ Wan, C. and Jones, D.T. (2019) Improving protein function prediction with synthe
 
 ---------------------------------------------------------------
 # Running 
-It is recommended to use a standard computer cluster that allows to execute multiple jobs simultaneously (e.g. the SGE array job).
+It is recommended to use a standard computer cluster that allows to run multiple jobs simultaneously (e.g. the SGE array job).
 
 * Step 1. Downloading real training feature samples via <br/><br/>`http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/RealTrainingData/`.
 
