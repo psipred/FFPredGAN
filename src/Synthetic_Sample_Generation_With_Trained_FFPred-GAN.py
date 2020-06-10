@@ -10,7 +10,7 @@ import torch.autograd as autograd
 import torch.nn as nn
 
 
-#-----Define the generator network-----
+#-----Define the generator network.
 class Generator(nn.Module):
 
     def __init__(self):
@@ -35,7 +35,7 @@ class Generator(nn.Module):
 GOTerm='GO0034613'
 number_of_samples=1
 
-#-----Load the trained generator network-----
+#-----Load the trained generator network.
 the_generator_model = Generator()
 the_generator_model.load_state_dict(torch.load(".../"+GOTerm+"_positive_model.pt"))
 the_generator_model.eval()
@@ -44,7 +44,7 @@ noisev = autograd.Variable(noise)
 fake = autograd.Variable(the_generator_model(noisev).data)
 fake_samples=fake.data.cpu().numpy()
 
-#-----Save the generated synthetic samples-----
+#-----Save the generated synthetic samples.
 fakedataset = np.array(fake_samples, dtype='float32')
 fileWriter_Synthetic_sample = open(".../Synthetic_samples.txt", "w")
 for index1 in range(len(fakedataset)):
