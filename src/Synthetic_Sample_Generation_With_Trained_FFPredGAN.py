@@ -1,6 +1,6 @@
 __author__ = 'cenwan'
 
-# The Python implementation of generating the synthetic samples by using the trained generator network of FFPred-GAN.
+# The Python implementation of generating synthetic samples by using the trained generator network of FFPred-GAN.
 import numpy as np
 import random
 import torch
