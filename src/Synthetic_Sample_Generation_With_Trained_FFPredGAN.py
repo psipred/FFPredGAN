@@ -1,6 +1,6 @@
 __author__ = 'cenwan'
 
-# The Python implementation of generating the synthetic samples by using the trained generator network.
+# The Python implementation of generating the synthetic samples by using the trained generator network of FFPred-GAN.
 import numpy as np
 import random
 import torch
@@ -8,7 +8,7 @@ import torch.autograd as autograd
 import torch.nn as nn
 
 
-#-----Defining the generator network-----
+#-----Define the generator network-----
 class Generator(nn.Module):
 
     def __init__(self):
@@ -29,11 +29,11 @@ class Generator(nn.Module):
             output = self.main(noise)
             return output
 
-#-----Change the GO ID if generating synthetic samples for other GO terms
+#-----Change the GO ID if generating synthetic samples for other GO terms.
 GOTerm='GO0034613'
 number_of_samples=1
 
-#-----Loading the trained generator network-----
+#-----Load the trained generator network-----
 the_generator_model = Generator()
 the_generator_model.load_state_dict(torch.load(".../"+GOTerm+"_positive_model.pt"))
 the_generator_model.eval()
@@ -42,7 +42,7 @@ noisev = autograd.Variable(noise)
 fake = autograd.Variable(the_generator_model(noisev).data)
 fake_samples=fake.data.cpu().numpy()
 
-#-----Saving the generated synthetic samples-----
+#-----Save the generated synthetic samples-----
 fakedataset = np.array(fake_samples, dtype='float32')
 fileWriter_Synthetic_sample = open(".../Synthetic_samples.txt", "w")
 for index1 in range(len(fakedataset)):
