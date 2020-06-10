@@ -392,7 +392,6 @@ for fold in range(0,10):
             for index2 in range(len(Fold_2_FFPredGAN)):
                 if Fold_2_FFPredGAN[index2].startswith(temp_array[0]+"%"+temp_array[1]):
                     prob_FFPredGAN=float(Fold_2_FFPredGAN[index2].split("%")[2])
-                    print()
                     Pred_Model=GOTerms_Model_Dict.get(temp_array[1])
                     testing_features=[]
                     testing_features2 = []
@@ -401,7 +400,6 @@ for fold in range(0,10):
                     testing_features2.append(testing_features)
                     testing_features2=np.asarray(testing_features2)
                     integrated_prob=Pred_Model.predict_proba(testing_features2)
-                    debug=integrated_prob[0][1]
                     fileWriter_IntegrateProb.write(temp_array[0]+"%"+temp_array[1] + "%" + str(integrated_prob[0][1]) + "\n")
                     booleanMarkNotFoundFFPredGAN=False
                     break
