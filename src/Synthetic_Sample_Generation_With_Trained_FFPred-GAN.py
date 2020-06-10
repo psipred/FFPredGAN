@@ -1,6 +1,8 @@
 __author__ = 'cenwan'
 
 # The Python implementation of generating synthetic samples by using the trained generator network of FFPred-GAN.
+# Please download the trained models via http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/TestingData/Trained_FFPredGAN_Models/.
+
 import numpy as np
 import random
 import torch
