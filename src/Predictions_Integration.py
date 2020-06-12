@@ -244,73 +244,73 @@ for fold in range(0,10):
         Targets_List_Fold1_Int.append(NetGOListFold1[index1].split("%")[0])
     Target_List_Fold1_Unique_Int = list(dict.fromkeys(Targets_List_Fold1_Int))
 
-    fileWriter_Cooccure_Dict = open(".../Fold_" + str(fold_index) + "/fileWriter_Cooccure_Dict.txt", "w")
-    fileWriter_Cooccure_Prob_NetGO = open(".../Fold_" + str(fold_index) + "/fileWriter_Cooccure_Prob_NetGO.txt", "w")
-    fileWriter_Cooccure_Prob_FFPredGAN = open(".../Fold_" + str(fold_index) + "/fileWriter_Cooccure_Prob_FFPredGAN.txt", "w")
+    fileWriter_Cooccur_Dict = open(".../Fold_" + str(fold_index) + "/fileWriter_Cooccur_Dict.txt", "w")
+    fileWriter_Cooccur_Prob_NetGO = open(".../Fold_" + str(fold_index) + "/fileWriter_Cooccur_Prob_NetGO.txt", "w")
+    fileWriter_Cooccur_Prob_FFPredGAN = open(".../Fold_" + str(fold_index) + "/fileWriter_Cooccur_Prob_FFPredGAN.txt", "w")
 
-    Cooccure_Dict={}
-    Cooccure_Prob_NetGO = {}
-    Cooccure_Prob_FFPredGAN = {}
+    Cooccur_Dict={}
+    Cooccur_Prob_NetGO = {}
+    Cooccur_Prob_FFPredGAN = {}
     for index1 in range(len(Target_List_Fold1_Unique_Int)):
         for index2 in range(len(NetGOListFold1)):
             if NetGOListFold1[index2].startswith(Target_List_Fold1_Unique_Int[index1]):
                 temp_list=NetGOListFold1[index2].split("%")
                 GOTerm_NetGO=temp_list[1]
                 Pred_Prob=temp_list[2]
-                check_cooccure=False
+                check_Cooccur=False
                 for index3 in range(len(FFPredGANListFold1)):
                     if FFPredGANListFold1[index3].startswith(Target_List_Fold1_Unique_Int[index1]+"%"+GOTerm_NetGO):
                         temp_list_FFPredGAN=FFPredGANListFold1[index3].split("%")
                         print()
-                        check_cooccure=True
-                        Cooccure_Prob_FFPredGAN[Target_List_Fold1_Unique_Int[index1]+"%"+GOTerm_NetGO]=temp_list_FFPredGAN[2]
-                        fileWriter_Cooccure_Prob_FFPredGAN.write(Target_List_Fold1_Unique_Int[index1]+"%"+GOTerm_NetGO+">"+temp_list_FFPredGAN[2]+"\n")
+                        check_Cooccur=True
+                        Cooccur_Prob_FFPredGAN[Target_List_Fold1_Unique_Int[index1]+"%"+GOTerm_NetGO]=temp_list_FFPredGAN[2]
+                        fileWriter_Cooccur_Prob_FFPredGAN.write(Target_List_Fold1_Unique_Int[index1]+"%"+GOTerm_NetGO+">"+temp_list_FFPredGAN[2]+"\n")
                         break
-                if check_cooccure==True:
-                    Cooccure_Prob_NetGO[temp_list[0]+"%"+temp_list[1]]=temp_list[2]
-                    fileWriter_Cooccure_Prob_NetGO.write(temp_list[0]+"%"+temp_list[1]+">"+temp_list[2]+"\n")
-                    Cooccure_Dict[temp_list[0]]=temp_list[1]
-                    fileWriter_Cooccure_Dict.write(temp_list[0]+">"+temp_list[1]+"\n")
+                if check_Cooccur==True:
+                    Cooccur_Prob_NetGO[temp_list[0]+"%"+temp_list[1]]=temp_list[2]
+                    fileWriter_Cooccur_Prob_NetGO.write(temp_list[0]+"%"+temp_list[1]+">"+temp_list[2]+"\n")
+                    Cooccur_Dict[temp_list[0]]=temp_list[1]
+                    fileWriter_Cooccur_Dict.write(temp_list[0]+">"+temp_list[1]+"\n")
 
-    fileWriter_Cooccure_Dict.flush()
-    fileWriter_Cooccure_Dict.close()
-    fileWriter_Cooccure_Prob_NetGO.flush()
-    fileWriter_Cooccure_Prob_NetGO.close()
-    fileWriter_Cooccure_Prob_FFPredGAN.flush()
-    fileWriter_Cooccure_Prob_FFPredGAN.close()
+    fileWriter_Cooccur_Dict.flush()
+    fileWriter_Cooccur_Dict.close()
+    fileWriter_Cooccur_Prob_NetGO.flush()
+    fileWriter_Cooccur_Prob_NetGO.close()
+    fileWriter_Cooccur_Prob_FFPredGAN.flush()
+    fileWriter_Cooccur_Prob_FFPredGAN.close()
 
-    with open(".../Fold_" + str(fold_index) + "/fileWriter_Cooccure_Dict.txt") as Reader_Cooccure_Dict:
-        Cooccure_Dict_List=Reader_Cooccure_Dict.read().splitlines()
-    with open(".../Fold_" + str(fold_index) + "/fileWriter_Cooccure_Prob_NetGO.txt") as Reader_Cooccure_Prob_NetGO:
-        Cooccure_Prob_NetGO_List=Reader_Cooccure_Prob_NetGO.read().splitlines()
-    with open(".../Fold_" + str(fold_index) + "/fileWriter_Cooccure_Prob_FFPredGAN.txt") as Reader_Cooccure_Prob_FFPredGAN:
-        Cooccure_Prob_FFPredGAN_List=Reader_Cooccure_Prob_FFPredGAN.read().splitlines()
+    with open(".../Fold_" + str(fold_index) + "/fileWriter_Cooccur_Dict.txt") as Reader_Cooccur_Dict:
+        Cooccur_Dict_List=Reader_Cooccur_Dict.read().splitlines()
+    with open(".../Fold_" + str(fold_index) + "/fileWriter_Cooccur_Prob_NetGO.txt") as Reader_Cooccur_Prob_NetGO:
+        Cooccur_Prob_NetGO_List=Reader_Cooccur_Prob_NetGO.read().splitlines()
+    with open(".../Fold_" + str(fold_index) + "/fileWriter_Cooccur_Prob_FFPredGAN.txt") as Reader_Cooccur_Prob_FFPredGAN:
+        Cooccur_Prob_FFPredGAN_List=Reader_Cooccur_Prob_FFPredGAN.read().splitlines()
     with open(".../Fold_" + str(fold_index) + "/TrueLabel_Fold_1.txt") as Reader_True_Label_BPed:
         True_Label_BPed_List=Reader_True_Label_BPed.read().splitlines()
 
-    Cooccure_GO_Terms=[]
-    Cooccure_Protein=[]
-    for index1 in range(len(Cooccure_Dict_List)):
-        temp=Cooccure_Dict_List[index1].split(">")
-        Cooccure_GO_Terms.append(temp[1])
-        Cooccure_Protein.append(temp[0])
-    Cooccure_GO_Terms_unique=list(dict.fromkeys(Cooccure_GO_Terms))
-    Cooccure_Protein_unique=list(dict.fromkeys(Cooccure_Protein))
+    Cooccur_GO_Terms=[]
+    Cooccur_Protein=[]
+    for index1 in range(len(Cooccur_Dict_List)):
+        temp=Cooccur_Dict_List[index1].split(">")
+        Cooccur_GO_Terms.append(temp[1])
+        Cooccur_Protein.append(temp[0])
+    Cooccur_GO_Terms_unique=list(dict.fromkeys(Cooccur_GO_Terms))
+    Cooccur_Protein_unique=list(dict.fromkeys(Cooccur_Protein))
 
     Valid_GOTerm=[]
     GOTerms_Model_Dict={}
-    for index1 in range(len(Cooccure_GO_Terms_unique)):
+    for index1 in range(len(Cooccur_GO_Terms_unique)):
         prob_NetGO=[]
         prob_FFPredGAN=[]
         true_Label=[]
-        for index2 in range(len(Cooccure_Dict_List)):
-            if Cooccure_GO_Terms_unique[index1] in Cooccure_Dict_List[index2]:
-                prob_NetGO.append(Cooccure_Prob_NetGO_List[index2].split(">")[1])
-                prob_FFPredGAN.append(Cooccure_Prob_FFPredGAN_List[index2].split(">")[1])
-                protein_ID=Cooccure_Dict_List[index2].split(">")[0]
+        for index2 in range(len(Cooccur_Dict_List)):
+            if Cooccur_GO_Terms_unique[index1] in Cooccur_Dict_List[index2]:
+                prob_NetGO.append(Cooccur_Prob_NetGO_List[index2].split(">")[1])
+                prob_FFPredGAN.append(Cooccur_Prob_FFPredGAN_List[index2].split(">")[1])
+                protein_ID=Cooccur_Dict_List[index2].split(">")[0]
                 BooleanFoundLabel=False
                 for index3 in range(len(True_Label_BPed_List)):
-                    if protein_ID+"%"+Cooccure_GO_Terms_unique[index1] in True_Label_BPed_List[index3]:
+                    if protein_ID+"%"+Cooccur_GO_Terms_unique[index1] in True_Label_BPed_List[index3]:
                         BooleanFoundLabel=True
                         break
                 if BooleanFoundLabel==True:
@@ -346,15 +346,15 @@ for fold in range(0,10):
 
             logisticRegr = LogisticRegression(random_state=2048, penalty=pen, solver=solv, C=c_value, class_weight=classw)
             trained_model=logisticRegr.fit(training_features, true_Label)
-            GOTerms_Model_Dict[Cooccure_GO_Terms_unique[index1]]=trained_model
-            filename = '.../Fold_' + str(fold_index) + '/'+Cooccure_GO_Terms_unique[index1].split(":")[0]+Cooccure_GO_Terms_unique[index1].split(":")[1]+'_logisticRegression_model.sav'
+            GOTerms_Model_Dict[Cooccur_GO_Terms_unique[index1]]=trained_model
+            filename = '.../Fold_' + str(fold_index) + '/'+Cooccur_GO_Terms_unique[index1].split(":")[0]+Cooccur_GO_Terms_unique[index1].split(":")[1]+'_logisticRegression_model.sav'
             joblib.dump(trained_model, filename)
             loaded_model = joblib.load(filename)
             debug_prediction=loaded_model.predict(training_features)
             prob_NetGO.clear()
             prob_FFPredGAN.clear()
             true_Label.clear()
-            Valid_GOTerm.append(Cooccure_GO_Terms_unique[index1])
+            Valid_GOTerm.append(Cooccur_GO_Terms_unique[index1])
         else:
             prob_NetGO.clear()
             prob_FFPredGAN.clear()
@@ -420,11 +420,11 @@ for fold in range(0,10):
     FFPredGAN_Fold_2.clear()
     TrueLabel_Fold_2.clear()
     Targets_List_Fold1_Int.clear()
-    Cooccure_Dict.clear()
-    Cooccure_Prob_NetGO.clear()
-    Cooccure_Prob_FFPredGAN.clear()
-    Cooccure_GO_Terms.clear()
-    Cooccure_Protein.clear()
+    Cooccur_Dict.clear()
+    Cooccur_Prob_NetGO.clear()
+    Cooccur_Prob_FFPredGAN.clear()
+    Cooccur_GO_Terms.clear()
+    Cooccur_Protein.clear()
     Valid_GOTerm.clear()
     GOTerms_Model_Dict.clear()
 
@@ -462,4 +462,3 @@ for fold in range(0,10):
                     fileWriterIntegration.write(TargetID+" "+GOTerm+" "+Prob+"\n")
 fileWriterIntegration.flush()
 fileWriterIntegration.close()
-
