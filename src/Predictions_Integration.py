@@ -135,7 +135,7 @@ fileWriter_Label_BPed.close()
 #-----In order to calculate the Fmax score, please use the Python script provided by the CAFA 3 paper published on Genome Bilogy (2019).
 fileWriterIntegration = open(".../Integration_NetGO_FFPredGAN_BP.txt", "w")
 
-#-----Load the 10-fold allocation index of targets.
+#-----Load the 10-fold allocation indices of CAFA 3 targets.
 with open(".../10_Fold_Allocation_BP.txt") as ReaderFoldAllocationIndex:
     FoldAllocationIndex=ReaderFoldAllocationIndex.read().splitlines()
 
