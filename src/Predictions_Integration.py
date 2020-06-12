@@ -132,6 +132,7 @@ fileWriter_Label_BPed.flush()
 fileWriter_Label_BPed.close()
 
 #-----This is the final output file including the integrated predictions based on FFPredGAN and NetGO.
+#-----In order to calculate the Fmax score, please use the Python script provided by the CAFA 3 paper published on Genome Bilogy (2019).
 fileWriterIntegration = open(".../Integration_NetGO_FFPredGAN_BP.txt", "w")
 
 #-----Load the 10-fold allocation index of targets.
