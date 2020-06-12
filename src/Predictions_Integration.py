@@ -26,7 +26,8 @@ def set_Dict(key, Prob, Target_GOTerm_Prob_Dict):
 with open(".../GO_Path.txt") as ReaderAllPath:
     AllPathList=ReaderAllPath.read().splitlines()
 
-#-----Load the raw predictions made by FFPredGAN for BP terms. Replace this file for the purpose of back-propagating the predictions on MF and CC terms made by FFPredGAN or other methods such as FFPred.
+#-----Load the raw predictions made by FFPredGAN for BP terms. 
+#-----Replace this file for the purpose of back-propagating the predictions on MF and CC terms made by FFPredGAN or other methods such as FFPred.
 with open(".../Predictions_FFPredGAN_BP_Raw.txt") as ReaderFFPredGANPredictionRaw:
     FFPredGANPredictionRawList=ReaderFFPredGANPredictionRaw.read().splitlines()
 Target_List_FFPredGAN=[]
@@ -61,7 +62,8 @@ for key, value in Target_GOTerm_Prob_Dict_FFPredGAN.items():
 fileWriter_FFPredGAN_BPed.flush()
 fileWriter_FFPredGAN_BPed.close()
 
-#-----Load the raw predictions made by NetGO for BP terms. Replace this file for the purpose of back-propagating the predictions on MF and CC terms.
+#-----Load the raw predictions made by NetGO for BP terms. 
+#-----Replace this file for the purpose of back-propagating the predictions on MF and CC terms.
 with open(".../Predictions_NetGO_BP_Raw.txt") as ReaderNetGOPredictionRaw:
     NetGOPredictionRawList=ReaderNetGOPredictionRaw.read().splitlines()
 Target_List_NetGO=[]
@@ -96,7 +98,8 @@ for key, value in Target_GOTerm_Prob_Dict_NetGO.items():
 fileWriter_NetGO_BPed.flush()
 fileWriter_NetGO_BPed.close()
 
-#-----Load the true BP term annotation labels of targets. Replace this file for the purpose of back-propagating the predictions on MF and CC terms.
+#-----Load the true BP term annotation labels of targets. 
+#-----Replace this file for the purpose of back-propagating the predictions on MF and CC terms.
 with open(".../True_Label_BP_Raw.txt") as ReaderLabelPredictionRaw:
     LabelPredictionRawList=ReaderLabelPredictionRaw.read().splitlines()
 Target_List_Label=[]
