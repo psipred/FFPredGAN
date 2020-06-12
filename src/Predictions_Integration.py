@@ -139,6 +139,7 @@ fileWriter_Label_BPed.close()
 fileWriterIntegration = open(".../Integration_NetGO_FFPredGAN_BP.txt", "w")
 
 #-----Load the 10-fold allocation indices of CAFA 3 targets.
+#-----Replace this file for the purpose of integrating the predictions on MF and CC terms.
 with open(".../10_Fold_Allocation_BP.txt") as ReaderFoldAllocationIndex:
     FoldAllocationIndex=ReaderFoldAllocationIndex.read().splitlines()
 
