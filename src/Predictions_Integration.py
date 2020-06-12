@@ -1,7 +1,7 @@
 __author__ = 'cenwan'
 
 #-----The Python (Scikit-learn version 0.22.2) implementation of a predictions integration approach.
-#-----Please download data via http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/TestingData/Integration/
+#-----Please download data via http://bioinfadmin.cs.ucl.ac.uk/downloads/FFPredGAN/TestingData/Integration/.
 
 import numpy as np
 import collections
