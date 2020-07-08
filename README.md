@@ -1,4 +1,5 @@
 # FFPred-GAN
+[![DOI](https://zenodo.org/badge/278064125.svg)](https://zenodo.org/badge/latestdoi/278064125)
 
 This is a Python implementation of FFPred-GAN method reported in a submitted paper:
 
