@@ -6,10 +6,6 @@ __author__ = 'cenwan'
 import numpy as np
 import math
 import glob
-from sklearn.svm import SVC
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import matthews_corrcoef, make_scorer, roc_auc_score
-import numpy as np
 import random
 import torch
 import torch.autograd as autograd
