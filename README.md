@@ -1,9 +1,9 @@
 # FFPred-GAN
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3936616.svg)](https://doi.org/10.5281/zenodo.3936616)
 
-This is a Python implementation of FFPred-GAN method reported in a submitted paper:
+This is a Python implementation of FFPred-GAN method reported in
 
-Wan, C. and Jones, D.T. (2019) Improving protein function prediction with synthetic feature samples created by generative adversarial networks. bioRxiv: 10.1101/730143.
+Wan, C. & Jones, D.T. (2020) Protein function prediction is improved by creating synthetic feature samples with generative adversarial networks. Nature Machine Intelligence. DOI: 10.1038/s42256-020-0222-1.
 
 ---------------------------------------------------------------
 # Requirements
